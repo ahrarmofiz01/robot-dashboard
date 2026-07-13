@@ -26,8 +26,4 @@ A web-based dashboard for monitoring and controlling an IoT robotic vehicle.
 - MongoDB Database
 - Live Camera Streaming
 
-## Installation
 
-```bash
-npm install
-npm start
