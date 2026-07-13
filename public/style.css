@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.navbar {
+  background: #1e3566;
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.badge.online {
+  background: #16a34a;
+}
+
+.badge.offline {
+  background: #dc2626;
+}
+
+.container {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.controls button {
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.map-box {
+  width: 100%;
+  height: 360px;
+  border-radius: 10px;
+  background: #e5e7eb;
+}
+
+#notifications div {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-left: 4px solid #2563eb;
+  background: #f9fafb;
+  border-radius: 6px;
+}

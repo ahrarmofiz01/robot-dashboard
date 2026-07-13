@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robot Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=Your_api_key" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <h1>Robot Dashboard</h1>
+    <span id="connStatus" class="badge offline">Offline</span>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Status</h2>
+      <p><strong id="statusText">Loading...</strong></p>
+      <p>ETA: <span id="etaText">--</span></p>
+      <p>Battery: <span id="batteryText">--</span></p>
+    </section>
+
+    <section class="panel">
+      <h2>Controls</h2>
+      <div class="controls">
+        <button onclick="sendControl('forward')">Forward</button>
+        <button onclick="sendControl('backward')">Backward</button>
+        <button onclick="sendControl('left')">Left</button>
+        <button onclick="sendControl('right')">Right</button>
+        <button onclick="sendControl('stop')">Stop</button>
+        <button onclick="sendControl('home')">Home</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Live Map</h2>
+      <div id="map" class="map-box"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Battery Graph</h2>
+      <canvas id="batteryChart"></canvas>
+    </section>
+
+    <section class="panel">
+      <h2>Notifications</h2>
+      <div id="notifications"></div>
+    </section>
+  </main>
+</body>
+</html>
